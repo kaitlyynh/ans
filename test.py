@@ -139,6 +139,15 @@ def question7():
     
 
 
+def extract_netids(email_string):
+    return [email[:email.find('@')] for email in email_string.split()]
+
+def map_values_to_coords(matrix):
+    return {
+        matrix[i][j]: (i, j)
+        for i in range(len(matrix))
+        for j in range(len(matrix[i]))
+    }
 
 
 
